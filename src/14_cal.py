@@ -22,4 +22,22 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
 if len(sys.argv) == 1:
+    today = datetime.today()
+    month = today.month
+    year = today.year
+    c = calendar.month(theyear=year, themonth=month)
+    print(c)
+elif len(sys.argv) == 2:
+    month = int(sys.argv[1])
+    year = datetime.today().year
+    c = calendar.month(theyear=year, themonth=month)
+    print(c)
+elif len(sys.argv) == 3:
+    month = int(sys.argv[1])
+    year = int(sys.argv[2])
+    c = calendar.month(theyear=year, themonth=month)
+    print(c)
+else:
+    print("Error: wrong number of arguments")
