@@ -61,11 +61,7 @@ print(f3(8))  # Should print 9
 # YOUR CODE HERE
 def f4(**kwargs):
     for arg in kwargs:
-        if isinstance(arg, dict):
-            for key in arg:
-                print("kew: ", key, ", value: ", arg[key])
-        else:
-            print("key: ", arg, ", value: ", kwargs[arg])
+        print("key: ", arg, ", value: ", kwargs[arg])
 
 
 # Should print
